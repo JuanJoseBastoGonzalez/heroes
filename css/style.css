@@ -1,0 +1,162 @@
+* {
+    background: #FFFFFF;
+    padding: 0;
+    margin: 0;
+}
+
+.nav {
+    display: grid;
+    /*grid-template-columns: 100%;*/
+    grid-template-columns: 33% 33% 33%;
+    justify-content: center;
+    align-content: center;
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+    grid-template-columns: auto;
+    background:#202020;
+    height: 60px;
+    font-size: 50px;
+    color: white;
+    align-items: center;
+    
+}
+.busqueda{
+    border-radius: 20px;
+    height:30px;
+    width: 300px;
+    text-align: center;
+    
+    
+}
+
+.logo-name {
+    display: flex;
+    justify-content: start;
+    background:#151515;
+    width: auto;
+    
+}
+
+.marvel {
+    width: 150px;
+    height: auto;
+    margin: 5px;
+}
+
+.logo {
+    margin-top: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); 
+ 
+    text-align: center;
+    margin-top: 20px;
+    gap: 0.5em;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid#1d1d1d;
+    border-radius: 20px;
+    background:#1d1d1d;
+    height: 380px;
+    color: white;
+    width: auto;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+
+.foto-cont {
+    height: 325px;
+    width: 275px;
+    margin: 5px auto 0;
+    background:#1d1d1d;
+}
+
+.foto {
+    height: 308px;
+    width: 275px;
+    border-radius: 5px 5px 0px 0px;
+    
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 5px;
+    border: 1px  #0476f2;
+  
+    
+}
+
+.nombre {
+    font-size: 25px;
+    background: #151515f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buton-ver {
+    font-size: 25px;
+    background: #990404;
+    width: 50px;
+    color: white;
+}
+
+.ver {
+    font-size: 25px;
+    background: #151515f5;
+    
+}
+.logoDc{
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 900px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+  .section{
+    width: 300px;
+    transform: scale(0.8);
+    margin-right: 1px;
+    margin-left: 1px;
+  }
+  
+};
+
+
+.ventana{
+    display: block;
+   
+}
+
+
+dialog{
+    display: block;
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.sections{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: 10px;
+    width: auto
+}
+.imagenMini img {
+    max-width: 400px; /* Establece el ancho máximo de la imagen */
+    height: auto; /* Hace que la altura se ajuste automáticamente al ancho */
+  }
+  
