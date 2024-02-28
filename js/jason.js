@@ -181,7 +181,20 @@ function cerrarModal(dialogId) {
     modal.style.display = "none";
 }
 
+const marvelv = document.getElementById("marvel");
+const dcOcult = document.getElementById("containerDc");
+const logoD = document.getElementById("logoDc");
+marvelv.addEventListener("click", function () {
+    dcOcult.style.display = "none";
+    logoD.style.display = "none";
+});
 
+const inicio = document.getElementById("inicio");
+
+inicio.addEventListener("click", function () {
+    dcOcult.style.display = "grid";
+    logoD.style.display = "block";
+});
 
 
 
@@ -207,12 +220,5 @@ function cerrarModal(dialogId) {
 // });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const campoBusqueda = document.getElementById('busqueda');
-    
-    campoBusqueda.addEventListener('input', function() {
-        const valorBusqueda = this.value;
-        console.log('Valor ingresado:', valorBusqueda);
-        // Puedes realizar acciones adicionales aquí, como enviar el valor a través de un formulario o filtrar elementos en la página.
-    });
-});
+
+

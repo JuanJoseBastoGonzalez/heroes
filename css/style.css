@@ -3,8 +3,28 @@
     padding: 0px;
     margin: 0px;
 }
+#inicio{
+    font-family: none;
+    text-decoration: none;
+    border: none;
+    background: #202020;;
+    color:white;
+    font-size: 50px;
+    cursor: pointer;
+}
+.marvel-l{
+    width: 100px;
+    height: auto;
+  
+}
+.marvel1{
+    background: #202020;
+    font-size: none;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
 
-
+}
 
 .nav {
     display: grid;
@@ -76,7 +96,7 @@
 .section:hover{
     transform: scale(1.1);
     transition: 0.5s;
-    border: 5px solid #615200;
+    border: 5px solid #610000;
     align-content: center;
     
     transition-duration:1s;
@@ -129,7 +149,20 @@
 }
 
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1000px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+  .section{
+    width: 300px;
+    transform: scale(0.8);
+    margin-right: 1px;
+    margin-left: 1px;
+  }
+  
+}
+@media screen and (max-width: 800px){
     .container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -140,8 +173,21 @@
     margin-right: 1px;
     margin-left: 1px;
   }
-  
-};
+}
+@media screen and (max-width: 600px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-content: center;
+    }
+  .section{
+    width: 300px;
+    transform: scale(0.8);
+    margin-right: 1px;
+    margin-left: 1px;
+  }
+}
 
 
 .ventana{
@@ -165,8 +211,8 @@ dialog{
     width: auto
 }
 .imagenMini img {
-    max-width: 100%; /* Establece el ancho máximo de la imagen */
-    height: auto; /* Hace que la altura se ajuste automáticamente al ancho */
+    max-width: 100%; 
+    height: auto; 
   }
   
 .inforS{
