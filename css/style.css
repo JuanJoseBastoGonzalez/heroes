@@ -12,18 +12,26 @@
     font-size: 50px;
     cursor: pointer;
 }
-.marvel-l{
+
+.marvel-logo{
     width: 100px;
     height: auto;
-  
-}
-.marvel1{
     background: #202020;
     font-size: none;
     text-decoration: none;
     border: none;
     cursor: pointer;
 
+}
+.dc-logo{
+    width: 40px;
+    background: none;
+    margin-left: 2px;
+    background: #202020;
+    font-size: none;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
 }
 
 .nav {
@@ -120,7 +128,7 @@
     grid-template-columns: 60% 40%;
     margin-top: 5px;
     border: 1px  #0476f2;
-  
+    
     
 }
 
@@ -146,6 +154,7 @@
 }
 .logoDc{
     margin-top: 10px;
+    
 }
 
 

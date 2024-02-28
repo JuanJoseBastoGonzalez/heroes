@@ -171,22 +171,31 @@ heroesM.forEach(element => {
 
 
 
+ 
 function mostrarModal(dialogId) {
     const modal = document.getElementById(dialogId);
     modal.style.display = "block";
+    
+     
+    modal.style.zIndex = "9999";
+
 }
 
 function cerrarModal(dialogId) {
     const modal = document.getElementById(dialogId);
     modal.style.display = "none";
+    difuminar.style.filter= "blur(0px)"; 
+    
 }
-
+const logoMarver = document.getElementById("marvel");
 const marvelv = document.getElementById("marvel");
 const dcOcult = document.getElementById("containerDc");
 const logoD = document.getElementById("logoDc");
 marvelv.addEventListener("click", function () {
     dcOcult.style.display = "none";
     logoD.style.display = "none";
+    logoMarver.style.display = "none";
+
 });
 
 const inicio = document.getElementById("inicio");
@@ -194,6 +203,7 @@ const inicio = document.getElementById("inicio");
 inicio.addEventListener("click", function () {
     dcOcult.style.display = "grid";
     logoD.style.display = "block";
+    logoMarver.style.display = "block";
 });
 
 
