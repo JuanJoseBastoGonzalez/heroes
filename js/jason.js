@@ -1,6 +1,3 @@
-
-
-
 var heroesM=[{
     name:'Thor',
     description: `Thor es un poderoso héroe de Marvel,
@@ -92,15 +89,54 @@ var heroesM=[{
      en batallas`,
     foto:"images/Hulk.webp",
 },
-
 ]
 
-var imagenes=[
-    `images/thor.jpg`,
-    `images/Hulk.jpg`
-]
 
-heroesM.forEach(element => {
+
+var heroesD=[{
+    name:'Thor',
+    description: `Thor es un poderoso héroe de Marvel,
+     dios del trueno y miembro de los Vengadores. 
+     Con su fuerza sobrehumana y control sobre el trueno, 
+     lucha contra enemigos como Loki y Thanos. 
+     Armado con el martillo Mjolnir, Thor demuestra valentía y liderazgo 
+     en batallas épicas. Interpretado por Chris Hemsworth en el cine,
+      es uno de los personajes más populares de Marvel.`,
+    foto:"images/thor.webp",
+},
+{
+    name:'Hulk',
+    description: `Hulk es un héroe de Marvel,
+     dios del trueno y miembro de los Vengadores. 
+     Con su fuerza sobrehumana y control sobre el trueno, 
+     lucha contra enemigos como Loki y Thanos. 
+     Armado con el martillo Mjolnir, Thor demuestra valentía y liderazgo 
+     en batallas`,
+    foto:"images/Hulk.webp",
+},
+{
+    name:'Blackwidow',
+    description: `Hulk es un héroe de Marvel,
+     dios del trueno y miembro de los Vengadores. 
+     Con su fuerza sobrehumana y control sobre el trueno, 
+     lucha contra enemigos como Loki y Thanos. 
+     Armado con el martillo Mjolnir, Thor demuestra valentía y liderazgo 
+     en batallas`,
+    foto:"images/Blackwidow.jpg",
+},
+{
+    name:'wolverine',
+    description: `Hulk es un héroe de Marvel,
+     dios del trueno y miembro de los Vengadores. 
+     Con su fuerza sobrehumana y control sobre el trueno, 
+     lucha contra enemigos como Loki y Thanos. 
+     Armado con el martillo Mjolnir, Thor demuestra valentía y liderazgo 
+     en batallas`,
+    foto:"images/wolverine.avif",
+},]
+
+
+heroesD.forEach(element => {
     const addContainer = document.getElementById('container');
     const dialogId = `ventana-${element.name.replace(/\s+/g, '-').toLowerCase()}`; // Generar un ID único para el diálogo
     addContainer.innerHTML += `
@@ -187,48 +223,23 @@ function cerrarModal(dialogId) {
     difuminar.style.filter= "blur(0px)"; 
     
 }
-const logoMarver = document.getElementById("marvel");
-const marvelv = document.getElementById("marvel");
-const dcOcult = document.getElementById("containerDc");
-const logoD = document.getElementById("logoDc");
-marvelv.addEventListener("click", function () {
-    dcOcult.style.display = "none";
-    logoD.style.display = "none";
-    logoMarver.style.display = "none";
 
-});
+// const BotonDc =document.getElementById("dc");
+// const BotonM=document.getElementById("marvel");
+// const contenidoDc = document.getElementById("container");
+// const contenidiM = document.getElementById("containerM");
+// const inicio = document.getElementById("inicio");
 
-const inicio = document.getElementById("inicio");
-
-inicio.addEventListener("click", function () {
-    dcOcult.style.display = "grid";
-    logoD.style.display = "block";
-    logoMarver.style.display = "block";
-});
-
-
-
-
-
-
-// selectElement.addEventListener("change", handleChange);
-// // Agregar un evento de escucha para el evento 'change' al elemento select
-
-
-// // Obtener el botón con el ID "marvel"
-// var botonf = document.getElementById("marvel");
-
-// // Agregar un event listener para el evento de clic en el botón
-// botonf.addEventListener("click", handle);
-
-// // Agregar otro event listener para el evento de clic en el botón
-// botonf.addEventListener("click", function () {
-//     // Obtener el elemento con el ID "containerDc"
-//     var elemento = document.getElementById("containerDc");
-//     // Ocultar el elemento cambiando su estilo display a "none"
-//     elemento.style.display = "none";
+// BotonDc.addEventListener("click", function () {
+  
 // });
 
+// inicio.addEventListener("click", function () {
+//    contenidiM.style.display="grit";
+//    contenidoDc.style.display="grit";
+
+  
+// });
 
 
 

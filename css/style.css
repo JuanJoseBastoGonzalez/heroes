@@ -13,9 +13,10 @@
     cursor: pointer;
 }
 
-.marvel-logo{
+.dc-logo{
     width: 100px;
     height: auto;
+    margin-left: 2px;
     background: #202020;
     font-size: none;
     text-decoration: none;
@@ -23,10 +24,10 @@
     cursor: pointer;
 
 }
-.dc-logo{
-    width: 40px;
+.marvel-logo{
+    width: 50px;
     background: none;
-    margin-left: 2px;
+    
     background: #202020;
     font-size: none;
     text-decoration: none;
@@ -127,9 +128,7 @@
     display: grid;
     grid-template-columns: 60% 40%;
     margin-top: 5px;
-    border: 1px  #0476f2;
-    
-    
+    border: 1px  #0476f2;   
 }
 
 .nombre {
@@ -150,11 +149,9 @@
 .ver {
     font-size: 25px;
     background: #151515f5;
-    
 }
 .logoDc{
-    margin-top: 10px;
-    
+    margin-top: 5px;
 }
 
 
@@ -201,7 +198,6 @@
 
 .ventana{
     display: none;
-   
 }
 
 
@@ -211,7 +207,6 @@ dialog{
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
 }
 .sections{
     display: grid;
@@ -219,18 +214,19 @@ dialog{
     height: 10px;
     width: auto
 }
+
 .imagenMini img {
     max-width: 100%; 
     height: auto; 
-  }
+}
   
 .inforS{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     justify-content: center;
     margin-top: 5px;
- 
 }
+
 .infor{
     font-size: 30px;
 }
