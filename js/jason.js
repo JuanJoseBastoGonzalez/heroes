@@ -250,16 +250,41 @@ function mostrarInformacion() {
     var info = document.getElementById("info").value;
 
     // Filtrar héroes que coinciden con el nombre ingresado
-    const heroesFiltrados = heroesM.filter(heroe => {
+    const heroeFiltrado = heroesM.find(heroe => {
         return heroe.name.toLowerCase() === info.toLowerCase();
     });
 
-    // Mostrar información de los héroes filtrados (puedes cambiar esto según tus necesidades)
-    if (heroesFiltrados.length > 0) {
-        alert("Se encontraron héroes con el nombre ingresado:\n" + 
-              heroesFiltrados.map(heroe => heroe.name).join(", "));
+    // Crear un diccionario con los datos del héroe filtrado
+    const heroeDiccionario = {};
+    if (heroeFiltrado) {
+        heroeDiccionario.name = heroeFiltrado.name;
+        heroeDiccionario.description = heroeFiltrado.description;
+        heroeDiccionario.foto = heroeFiltrado.foto;
+    }
+
+    // Mostrar información del héroe filtrado (puedes cambiar esto según tus necesidades)
+    if (heroeFiltrado) {
+        alert("Se encontró un héroe con el nombre ingresado:\n" + 
+              "Nombre: " + heroeDiccionario.name + "\n" + 
+              "Descripción: " + heroeDiccionario.description + "\n" + 
+              "Foto: " + heroeDiccionario.foto);
     } else {
         alert("No se encontraron héroes con el nombre ingresado.");
     }
+
+    contenidiDc.style.display="none";
+    contenidoM.style.display="none";
+    logodcd.style.display="none";
+
+
+
+
+
+
+
+
+    
+
 }
+
 
