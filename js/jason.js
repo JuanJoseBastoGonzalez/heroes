@@ -246,6 +246,40 @@ BotonI.addEventListener("click", function () {
     BotonM.style.display="block";
     logodcd.style.display="block";
 });
+
+let btnbuscar = document.getElementById("search")
+
+btnbuscar.addEventListener("click", function (e) {
+    e.preventDefault();
+    let heroe = {}
+    heroe = mostrarInformacion();
+    console.log(heroe);
+    imprimirheroe(heroe);
+    e.stopPropagation();
+})
+
+
+function imprimirheroe(element) {
+
+    let addContainer = document.getElementById('filtrat');
+    addContainer.textContent ="";
+        addContainer.innerHTML = `
+                    <section class="section">
+                        <div class="foto-cont">
+                            <img class="foto" src=${element["foto"]}>
+                        </div>
+                        <div class="info">
+                            <section id="name" class="nombre">${element["name"]} </section>  
+                            <section class="ver"> 
+                                <button class="buton-ver" onclick="mostrarModal('')">ver</button>
+                            </section>
+                        </div>
+                    </section>
+                `;
+}
+
+
+
 function mostrarInformacion() {
     var info = document.getElementById("info").value;
 
@@ -260,6 +294,16 @@ function mostrarInformacion() {
         heroeDiccionario.name = heroeFiltrado.name;
         heroeDiccionario.description = heroeFiltrado.description;
         heroeDiccionario.foto = heroeFiltrado.foto;
+    
+    
+    
+    
+       
+    
+    
+    
+    
+    
     }
 
     // Mostrar información del héroe filtrado (puedes cambiar esto según tus necesidades)
@@ -267,24 +311,56 @@ function mostrarInformacion() {
         alert("Se encontró un héroe con el nombre ingresado:\n" + 
               "Nombre: " + heroeDiccionario.name + "\n" + 
               "Descripción: " + heroeDiccionario.description + "\n" + 
+
               "Foto: " + heroeDiccionario.foto);
+
+
+        
+
+
+
+
+
+
     } else {
         alert("No se encontraron héroes con el nombre ingresado.");
     }
+        
+   
+        // Ocultar otros elementos
+        contenidiDc.style.display = "none";
+        contenidoM.style.display = "none";
+        logodcd.style.display = "none";
+     
+   
 
-    contenidiDc.style.display="none";
-    contenidoM.style.display="none";
-    logodcd.style.display="none";
+       
 
-
-
-
-
-
-
-
-    
+    return heroeFiltrado
+      
 
 }
 
 
+//     for (const key in heroeDiccionario) {
+//         if (Object.hasOwnProperty.call(heroeDiccionario, key)) {
+//             const element = heroeDiccionario[key];
+//             let addContainer = document.getElementById('filtrat');
+//         // let dialogId = `ventana-${element.name.replace(/\s+/g, '-').toLowerCase()}`; // Generar un ID único para el diálogo
+//             addContainer.textContent ="";
+//             addContainer.innerHTML = `
+//                 <section class="section">
+//                     <div class="foto-cont">
+//                         <img class="foto" src=${element["foto"]}>
+//                     </div>
+//                     <div class="info">
+//                         <section id="name" class="nombre">${element["name"]} </section>  
+//                         <section class="ver"> 
+//                             <button class="buton-ver" onclick="mostrarModal('${dialogId}')">ver</button>
+//                         </section>
+//                     </div>
+//                 </section>
+//             `;
+//         }
+
+// }
