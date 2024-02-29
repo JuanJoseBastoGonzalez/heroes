@@ -203,43 +203,63 @@ heroesM.forEach(element => {
         </dialog>`;
 });
 
-
-
-
-
  
 function mostrarModal(dialogId) {
     const modal = document.getElementById(dialogId);
     modal.style.display = "block";
-    
-     
     modal.style.zIndex = "9999";
-
 }
 
 function cerrarModal(dialogId) {
     const modal = document.getElementById(dialogId);
     modal.style.display = "none";
     difuminar.style.filter= "blur(0px)"; 
-    
 }
 
-// const BotonDc =document.getElementById("dc");
-// const BotonM=document.getElementById("marvel");
-// const contenidoDc = document.getElementById("container");
-// const contenidiM = document.getElementById("containerM");
-// const inicio = document.getElementById("inicio");
+const BotonDc =document.getElementById("dc");
+const BotonM=document.getElementById("marvel");
+const contenidoM = document.getElementById("container");
+const contenidiDc = document.getElementById("containerDc");
+const BotonI = document.getElementById("inicio");
+const todo = document.getElementsByClassName("container");
+const logodcd = document.getElementById("logoDc");
 
-// BotonDc.addEventListener("click", function () {
-  
-// });
+BotonDc.addEventListener("click", function () {
+    contenidoM.style.display="none";
+    contenidiDc.style.display="grid";
+    BotonDc.style.display="none";
+    BotonM.style.display="block";
+});
 
-// inicio.addEventListener("click", function () {
-//    contenidiM.style.display="grit";
-//    contenidoDc.style.display="grit";
+BotonM.addEventListener("click",function(){
+    contenidiDc.style.display="none";
+    contenidoM.style.display="grid";
+    BotonM.style.display="none";
+    BotonDc.style.display="block";
+    logodcd.style.display="none";
+});
 
-  
-// });
+BotonI.addEventListener("click", function () {
+    contenidiDc.style.display="grid";
+    contenidoM.style.display="grid";
+    BotonDc.style.display="block";
+    BotonM.style.display="block";
+    logodcd.style.display="block";
+});
+function mostrarInformacion() {
+    var info = document.getElementById("info").value;
 
+    // Filtrar héroes que coinciden con el nombre ingresado
+    const heroesFiltrados = heroesM.filter(heroe => {
+        return heroe.name.toLowerCase() === info.toLowerCase();
+    });
 
+    // Mostrar información de los héroes filtrados (puedes cambiar esto según tus necesidades)
+    if (heroesFiltrados.length > 0) {
+        alert("Se encontraron héroes con el nombre ingresado:\n" + 
+              heroesFiltrados.map(heroe => heroe.name).join(", "));
+    } else {
+        alert("No se encontraron héroes con el nombre ingresado.");
+    }
+}
 
